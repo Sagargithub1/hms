@@ -7,6 +7,12 @@
 <title>HMS-Login</title>
 </head>
 <body>
+<center><h1>Login</h1></center>
+<form action="LoginServlet" method="post">
+Login	<input type="text" name="username"><br/>
+Password <input type="password" name="userpassword"><br/>
+<input type="submit" value="Login">
 
+</form>
 </body>
 </html>
