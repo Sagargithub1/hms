@@ -9,8 +9,8 @@
 <body>
 
 <%-- <% String userName=(String)request.getAttribute("userName"); 
-out.println(userName);%>   
- --%>
+out.println(userName);%>    --%>
+
 <%
 response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
 response.setHeader("pragma", "no-cache"); // http 1.0
@@ -19,10 +19,20 @@ if(session.getAttribute("Developer")==null){
 	response.sendRedirect("login.jsp");
 }
 %>
+<h1><center>Developer's Screen</center></h1><hr>
 
-
-Welcome ${Developer} 
-I m Developer
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

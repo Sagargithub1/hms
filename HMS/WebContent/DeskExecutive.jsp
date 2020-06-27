@@ -7,6 +7,18 @@
 <title>DeskExecutive</title>
 </head>
 <body>
-I am ${DeskExecutive} and i am a DeskExecutive.
+<% 
+	if(session.getAttribute("DeskExecutive")==null){
+	response.sendRedirect("login.jsp");
+}
+%>
+<nav>
+<ul>
+<a href="AddPatients.jsp">Add Patients</a><br/>
+<a href="ViewPatients.jsp">View Patients</a><br/>
+<a href="UpdatePatients.jsp">Update Patients</a><br/>
+<a href="DeletePatients.jsp">Delete Patients</a><br/>
+</ul>
+</nav>
 </body>
 </html>
