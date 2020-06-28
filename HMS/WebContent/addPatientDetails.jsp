@@ -24,7 +24,13 @@
 	}
 	
 %> --%>
-<%	out.println("Successfully added"); %>
+
+
+
+
+<%	out.println("Successfully added");
+
+%>
 
 </body>
 </html>

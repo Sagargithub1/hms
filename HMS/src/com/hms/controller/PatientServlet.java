@@ -50,7 +50,7 @@ public class PatientServlet extends HttpServlet {
 	    
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
-		
+		int id=0;
 		int patientSsnNo=Integer.parseInt(request.getParameter("patSsnNumber"));
 		String patientName=request.getParameter("patName");
 		int patientAge=Integer.parseInt(request.getParameter("patAge"));
@@ -70,6 +70,7 @@ public class PatientServlet extends HttpServlet {
 		patient.setPatientAddress(patientAddress);
 		patient.setPatientState(patientState);
 		patient.setPatientCity(patientCity);
+		patient.setStatus("Active");
 		
 		try {
 			PatientDao.addPatient(patient);
@@ -79,7 +80,8 @@ public class PatientServlet extends HttpServlet {
 			System.out.println(e);
 		}
 		
-		response.sendRedirect("addPatientDetails.jsp");
+		request.getRequestDispatcher("addPatientDetails.jsp").include(request, response);
+
 		
 		
 		
