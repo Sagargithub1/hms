@@ -117,28 +117,18 @@ public class PatientDao {
 		try {
 			Connection con = DBConnection.createConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_RECORDS_SQL);
-//			ps.setString(3, p.getPatientName());
-//			ps.setInt(7, p.getPatientAge());
-////			ps.setTimestamp(8, p.getDateOfJoining());
-//			ps.setString(9, p.getTypeOfBed());
-//			ps.setString(4, p.getPatientAddress());
-//			ps.setString(5, p.getPatientState());
-//			ps.setString(6, p.getPatientCity());
-//			ps.setInt(1, p.getPatientId());
-//			status=ps.executeUpdate();
+			ps.setString(1,p.getPatientName());
+			ps.setString(2, p.getPatientAddress());
+			ps.setString(3, p.getPatientState());
+			ps.setString(4, p.getPatientCity());
+			ps.setInt(5, p.getPatientAge());
+			ps.setString(6, p.getTypeOfBed());
+			ps.setInt(7, p.getPatientId());
 //			System.out.println("Patient Updated");
-
+//			public static String QUPDATE_RECORDS_SQL = "update pat_test set patient_name=?,patient_address=?,patient_state=?,patient_city=?,patient_age=?,patient_typeOfBed=? where patient_id=?; ";
 			
-			  ps.setString(1, p.getPatientName()); 
-			  ps.setInt(2, p.getPatientAge());
-//			  ps.setTimestamp(3, p.getDateOfJoining()); 
-			  ps.setString(3, p.getTypeOfBed());
-			  ps.setString(4, p.getPatientAddress()); 
-			  ps.setString(5, p.getPatientState());
-			  ps.setString(6, p.getPatientCity()); 
-			  ps.setInt(7, p.getPatientId());
-			  status=ps.executeUpdate(); 
-			  System.out.println("Patient Updated");
+			status=ps.executeUpdate(); 
+			System.out.println("Patient Updated");
 			  
 				/*
 				 * ResultSet rs=ps.executeQuery(); while(rs.next()) {
@@ -157,11 +147,12 @@ public class PatientDao {
 		int status = 0;
 		try {
 			Connection con = DBConnection.createConnection();
-			PreparedStatement ps = con
-					.prepareStatement("Update pat_test set patient_status='Discharged' where patient_id=?;");
+			PreparedStatement ps = con.prepareStatement("Update pat_test set patient_status='Discharged' where patient_id=?;");
+//			ps.setString(1, p.getStatus());
 			ps.setInt(1, p.getPatientId());
-			ps.setString(10, p.getStatus());
+			
 			status = ps.executeUpdate();
+			System.out.println("Patient Deleted");
 
 		} catch (Exception e) {
 			// TODO: handle exception

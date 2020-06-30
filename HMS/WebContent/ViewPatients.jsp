@@ -27,7 +27,7 @@
 <tr><td>${u.getPatientId()}</td><td>${u.getPatientName()}</td><td>${u.getPatientAge()}</td>  
 <td>${u.getPatientAddress()}</td><td>${u.getDateOfJoining()}</td><td>${u.getTypeOfBed()}</td>  
 <td><a href="UpdatePatients.jsp?pat_id=${u.getPatientId()}">Edit</a></td> 
-<td><a href="#">Delete</a></td></tr>  
+<td><a href="DeletePatients.jsp?pat_id=${u.getPatientId()}">Delete</a></td></tr>  
 </c:forEach>
 <!-- 
 <td><a href="editform.jsp?id=${u.getId()}">Edit</a></td>  
