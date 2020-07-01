@@ -43,5 +43,6 @@ try{
 
 %>
 
+<a href="ViewPatients.jsp">View Patients</a>
 </body>
 </html>
