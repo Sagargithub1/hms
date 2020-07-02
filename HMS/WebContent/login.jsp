@@ -7,12 +7,27 @@
 <title>HMS-Login</title>
 </head>
 <body>
-<center><h1>Login</h1></center>
-<form action="LoginServlet" method="post">
-Login	<input type="text" name="username"><br/>
-Password <input type="password" name="userpassword"><br/>
-<input type="submit" value="Login">
+<!-- <h1 style="align-content: center">Login</h1>
+<form  action="LoginServlet" method="post">
+<table>
+<tr>
+<td>Login</td>
+<td><input  type="text" name="username"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input  type="password" name="userpassword"></td>
+</tr>
+<tr>
+<td><input  type="submit" value="Login"></td>
+</tr>
+</table>
 
-</form>
+</form> -->
+<%
+
+%>
+<jsp:include page="login.html"></jsp:include>
+
 </body>
 </html>
